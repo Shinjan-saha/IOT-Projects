@@ -18,7 +18,7 @@ Serial.begin(9600);
 void loop() {
   
 
-  if(digitalRead(3)==LOW && digitalRead(2)==LOW)
+  if(digitalRead(3)==HIGH && digitalRead(2)==HIGH)
 {//FORWARD
   digitalWrite(4,LOW);//M1 IN1
    digitalWrite(5,HIGH);//M1 IN2
@@ -28,7 +28,7 @@ void loop() {
      analogWrite(10,200);
      Serial.println("Start");
 }
- if(digitalRead(3)==HIGH && digitalRead(2)==LOW)
+ if(digitalRead(3)==LOW && digitalRead(2)==HIGH)
 {
   digitalWrite(4,LOW);//M1 IN1
    digitalWrite(5,HIGH);//M1 IN2
@@ -36,7 +36,7 @@ void loop() {
      digitalWrite(7,LOW);//M2 IN2
      Serial.println("Stop");
 }
-if(digitalRead(3)==LOW && digitalRead(2)==HIGH)
+if(digitalRead(3)==HIGH && digitalRead(2)==LOW)
 {
   digitalWrite(4,HIGH);//M1 IN1
    digitalWrite(5,LOW);//M1 IN2
